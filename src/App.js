@@ -7,7 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Video from './components/Video';
 import Footer from './components/Footer';
-import Sign from './components/Sign';
+import Sign from './components/Sign'; // Ensure this is imported
 import NGO from './components/NGO';
 import NotFound from './components/NotFound'; // Import the NotFound component
 import Contact from './components/Contact'; // Import the Contact component
@@ -22,13 +22,15 @@ function App() {
       <Routes>
         {/* Define routes for each section or page */}
         <Route path="/" element={<Home />} />
+        <Route path="/sign" element={<Sign />} /> {/* Add the Sign route */}
         <Route path="/contact" element={<Contact />} /> {/* Add the Contact route */}
         <Route path="/brand-campaigns" element={<NotFound />} />
-
+        
         {/* Catch-all route for unmatched URLs */}
         <Route path="*" element={<NotFound />} /> {/* NotFound route */}
       </Routes>
 
+      {/* Render other sections based on the current location */}
       {location.pathname !== '/sign' && location.pathname !== '/contact' && (
         <>
           <section id="about"><About /></section>
