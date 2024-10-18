@@ -443,8 +443,10 @@ body {
 
 .left-arrow, .right-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 90%;
+  
+  height: 0px;
+  transform: translateY(-5%);
   font-size: 2rem;
   background: none;
   border: none;

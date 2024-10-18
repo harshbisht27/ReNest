@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../App.css';
 
 const Home = () => {
+  const navigate = useNavigate(); // Initialize navigate
+
+  const handlePickupClick = () => {
+    navigate('/sign'); // Navigate to the Sign component when clicked
+  };
+
   return (
     <div className="home">
       {/* Parallax Banner Section */}
@@ -9,7 +16,7 @@ const Home = () => {
         <div className="banner-text">
           <h1>Spreading Smiles, Inspiring Happiness.</h1>
           <h2 className="subtitle">Ensuring Your Donations Reach the Right Hands.</h2>
-          <button className="cta-button">Book a Pickup ➜</button>
+          <button className="cta-button" onClick={handlePickupClick}>Book a Pickup ➜</button>
         </div>
       </section>
 

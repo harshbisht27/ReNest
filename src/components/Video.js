@@ -11,7 +11,7 @@ const Video = () => {
       <div className="video-container">
         <video
           className="delivery-video"
-          src='https://download.shutterstock.com/gatekeeper/W3siZCI6ICJzaHV0dGVyc3RvY2stbWVkaWEiLCAiayI6ICJ2aWRlby8xMTA4NTc2NjU5L3ByZXZpZXcubXA0IiwgImUiOiAxNzI5MjczMTc0LCAibSI6IDF9LCAiOUp2T3JjRnVNZWJHcVZjY3NJQnhzcmh4T2FFIl0=/1108576659-preview.mp4'
+          src="https://www.shutterstock.com/shutterstock/videos/1108576655/preview/stock-footage-home-delivery-by-application-motorcycle-delivering-a-home-on-the-map.webm"
           autoPlay
           loop
           muted

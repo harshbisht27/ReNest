@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+.step1, .step2, .step3, .step4, .step5 {
+    
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 70px;
+    margin-left: 15%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form headings */
+  h2 {
+    text-align: center;
+    color:#333333;
+    margin-bottom: 20px;
+
+  }
+  h3 {
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Labels */
+  label {
+    display:flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 27%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Input fields */
+  input[type="text"], input[type="email"] {
+    width: 50%;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+  }
+  
+  /* Input hover and focus effects */
+  input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #5A9;
+    box-shadow: 0 0 8px rgba(90, 153, 153, 0.4);
+  }
+  
+  /* Buttons */
+  button {
+    width:60%;
+    background-color: #F15622;
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f64f17;
+  }
+  
+  /* Step button layout */
+  button + button {
+    margin-left: 10px;
+    width: calc(50% - 5px);
+  }
+  
+  button:last-of-type {
+    background-color: #F15622;  /* Back button or cancel */
+  }
+  
+  button:last-of-type:hover {
+    background-color: #f14912;
+  }
+  
+  /* Confirmation display */
+  .step5 p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .step5 p strong {
+    color: #555;
+  }
+  
+  /* Map container styling */
+  .leaflet-container {
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+  .step2 {
+    margin-top: 100px;
+    display: flex;
+    margin-left: 27%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 600px; /* Set a maximum width for the form */
+   /* Center the form horizontally */
+    padding: 20px; /* Add some padding inside the form */
+    background-color: #f9f9f9; /* Light background color for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+  }
+  
+  .step2 h2 {
+   
+    font-size: 24px; /* Larger font size for the heading */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Darker text color */
+  }
+  
+  .step2 label {
+  margin-right: 160px;
+    margin-bottom: 15px; /* Space between labels */
+    font-family: 'Arial', sans-serif; /* Font for labels */
+    font-size: 18px; /* Font size for labels */
+    color: #555; /* Gray color for label text */
+  }
+  
+  .step2 input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and label text */
+  }
+  
+  .step2 select {
+    width: 100%; /* Full width for dropdown */
+    padding: 10px; /* Padding inside dropdown */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size for dropdown */
+    margin-top: 5px; /* Space above dropdown */
+  }
+  
+  .step2 input[type="date"],
+  .step2 input[type="text"],
+  .step2 input[type="time"] {
+    width: 100%; /* Full width for date and time inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size for inputs */
+    margin-top: 5px; /* Space above inputs */
+  }
+  .btn{
+    display: flex;
+  }
+  
+  .step2 button {
+    background-color: #F15622; /* Green background color for buttons */
+    color: white; /* White text color for buttons */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside buttons */
+    font-size: 16px; /* Font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  .step2 button:hover {
+    background-color:#f04811; /* Darker green on hover */
+  }
+  
+  .step2 button:last-of-type {
+    margin-left: 10px; /* Space between buttons */
+  }
+  
+  /* Two-part container layout */
+  .step3-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F9F9F9;
+    padding: 30px;
+    max-width: 900px;
+    margin: 50px auto;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .donation-selection {
+    width: 60%; /* Left side width */
+  }
+  
+  .donation-note {
+  
+    width: 35%; /* Right side width */
+    padding-right: 20px;
+    padding-top: 30px;
+    margin-top: 65px;
+    margin-bottom: 70px;
+    background-color: #eae7e7;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* No Items button moved under the note */
+  .no-items {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .no-items-btn {
+    background-color: #ff6347;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .no-items-btn:hover {
+    background-color: #ff7f7f;
+    transform: scale(1.05);
+  }
+  
+  /* Donation Items List */
+  .donation-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #dedbdb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-name {
+    color: #060606;
+    font-weight: bold;
+  }
+  
+  .item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  button.add-btn, button.remove-btn {
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  button.add-btn:hover, button.remove-btn:hover {
+    background-color: #ffa07a;
+    transform: scale(1.1);
+  }
+  
+  .item-count {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .back-btn, .next-btn {
+    background-color: #ff7f50;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .back-btn:hover, .next-btn:hover {
+    background-color: #ffa07a;
+    transform: scale(1.05);
+  }
+  
+  /* Note section styling */
+  .donation-note h3 {
+    color: #ff6347;
+    font-weight: bold;
+  }
+  
+  .donation-note p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .item-summary-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .step4-container {
+    margin-left: 19%;
+    margin-top: 100px;
+    max-width: 800px; /* Reduced maximum width for a shorter form */
+   /* Center the form horizontally */
+    padding: 20px; /* Adjusted padding for a more compact layout */
+    background-color: #ffffff; /* White background for clarity */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .step4-container h2 {
+    /* Custom font for the heading */
+    font-size: 26px; /* Font size for the heading */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #131212; /* Darker text color */
+  }
+  
+  .donor-details-form {
+    
+    display: flex; /* Use flexbox for form layout */
+    margin-right: 190px;
+    flex-direction: column; /* Stack the form elements vertically */
+  }
+  
+  .donor-details-form label {
+    
+    margin-bottom:0px; /* Space between labels */
+    /* Font for labels */
+    font-size: 16px; /* Smaller font size for labels */
+    color: #555; /* Gray color for label text */
+  }
+  
+  
+  .form-group {
+    display: flex; /* Use flexbox for input grouping */
+    justify-content: space-between; /* Space between inputs */
+    gap: 10px; /* Gap between inputs */
+    margin-bottom: 10px; /* Space below each input group */
+  }
+  
+  .donor-details-form input[type="text"],
+  .donor-details-form input[type="email"],
+  .donor-details-form input[type="tel"] {
+    color: #060606;
+    flex: 20; /* Allow inputs to take equal space */
+    padding: 10px; /* Standard padding */
+    border: 1px solid #F15622; /* Light border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Smaller font size for inputs */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+  }
+  
+  .donor-details-form input[type="text"]:focus,
+  .donor-details-form input[type="email"]:focus,
+  .donor-details-form input[type="tel"]:focus {
+    border-color: #F15622; /* Green border on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  .selected-items {
+    margin-top: 20px; /* Space above selected items section */
+  }
+  
+  .selected-items h3 {
+    font-family: 'Merriweather', serif; /* Custom font for the heading */
+    font-size: 22px; /* Font size for selected items heading */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #333; /* Darker text color */
+  }
+  
+  .donation-items-summary {
+    background-color: #f9f9f9; /* Light background color for item summary */
+    padding: 10px; /* Increased padding inside item summary */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ddd; /* Border for item summary */
+  }
+  
+  .item-summary-row {
+    display: flex; /* Use flexbox for item summary row */
+    justify-content: space-between; /* Space between item name and quantity */
+    padding: 8px 0; /* Padding for each row */
+    border-bottom: 1px solid #ccc; /* Bottom border for separation */
+  }
+  
+  .item-summary-row:last-child {
+    border-bottom: none; /* Remove border for the last item */
+  }
+  
+  .item-name {
+    font-weight: 600; /* Medium bold font for item names */
+    color: #333; /* Darker color for better visibility */
+  }
+  
+  .navigation-buttons {
+    margin-top: 20px; /* Space above buttons */
+    display: flex; /* Use flexbox for navigation buttons */
+    justify-content: space-between; /* Space between buttons */
+  }
+  
+  .back-btn,
+  .submit-btn {
+    background-color: #F15622; /* Green background color for buttons */
+    color: white; /* White text color for buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Increased padding for comfort */
+    font-size: 14px; /* Smaller font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and scaling */
+  }
+  
+  .back-btn:hover,
+  .submit-btn:hover {
+    background-color: #f14c15; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .submit-btn {
+    background-color: #007bff; /* Blue background for submit button */
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .thank-you-container {
+    margin-top: 100px;
+    text-align: center;
+    max-width: 500px;
+    margin-left: 30%;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for emphasis */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .thank-you-container h2 {
+    font-size: 24px;
+    color: #333; /* Darker text color */
+  }
+  
+  .thank-you-container p {
+    font-size: 18px;
+    margin: 10px 0; /* Spacing between paragraphs */
+    color: #555; /* Slightly lighter text */
+  }
+  
+  .redirect-btn {
+    padding: 10px 20px; /* Button padding */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .redirect-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
