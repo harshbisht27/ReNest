@@ -14,13 +14,13 @@ body {
 .App {
   text-align: center;
 }
-
+/* General Navbar styles */
 /* General Navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 15px 30px; /* Original padding */
   width: 100%;
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@ body {
   z-index: 100;
   transition: background-color 0.3s ease, color 0.3s ease;
   background-color: transparent; /* Transparent initially */
-  color: white; /* Text color black initially */
+  color: white; /* Text color */
 }
 
 .navbar.scrolled {
@@ -37,14 +37,14 @@ body {
 }
 
 .navbar-logo img {
-  height: 50px;
+  height: 50px; /* Original logo height */
 }
 
 /* Links in the navbar */
 .navbar-links {
   list-style: none;
-  display: flex;
-  gap: 20px;
+  display: flex; /* Original display */
+  gap: 20px; /* Space between links */
 }
 
 .navbar-links li {
@@ -62,37 +62,10 @@ body {
   color: #ff5722; /* Orange color on hover */
 }
 
-/* New label for the rewards */
-.new-label {
-  background-color: #ff5722;
-  color: white;
-  font-size: 0.7rem;
-  padding: 2px 5px;
-  border-radius: 5px;
-  position: absolute;
-  top: -10px;
-  right: -15px;
-}
-
-/* Book Now button */
-.book-now-button {
-  background-color: #ff5722;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.book-now-button:hover {
-  background-color: #e64a19;
-}
-
 /* User icon */
 .user-icon {
   cursor: pointer;
-  margin-left: 200px;
+  margin-left: 200px; /* Original margin */
   font-size: 1.5rem;
   color: inherit; /* Inherit the text color */
   border: 2px solid currentColor;
@@ -106,33 +79,61 @@ body {
   border-color: #ff5722;
 }
 
-/* Dropdown Animation */
-.navbar-links li:hover ul {
-  display: block;
+/* Hamburger styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stack bars vertically */
+  cursor: pointer; /* Change cursor on hover */
 }
 
-.navbar-links ul {
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background-color: #000;
-  padding: 10px;
-  list-style: none;
-  border-radius: 5px;
+/* Responsive styles for smaller screens */
+@media (max-width: 400px) {
+  .navbar {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide all links on very small screens */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on small screens */
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebar by default */
+    flex-direction: column; /* Stack items vertically */
+    position: fixed; /* Fixed position for sidebar */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #000; /* Background color */
+    padding: 20px; /* Some padding */
+    z-index: 200; /* Ensure it sits above other elements */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Fade effect */
+  }
+
+  .sidebar.open {
+    display: flex; /* Show sidebar when open */
+    opacity: 1; /* Fully visible */
+  }
+
+  /* Adjust the sidebar links */
+  .sidebar .navbar-links {
+    display: flex; /* Show links in sidebar */
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between links */
+  }
 }
 
-.navbar-links ul li {
-  margin-bottom: 10px;
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
 }
-
-.navbar-links ul li a {
-  color: white;
-  font-weight: normal;
-}
-
-
 
 /* Chatbot Button Styling */
 .chatbot-button {

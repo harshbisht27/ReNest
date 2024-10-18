@@ -7,30 +7,33 @@ import About from './components/About';
 import Services from './components/Services';
 import Video from './components/Video';
 import Footer from './components/Footer';
-import Sign from './components/Sign'; // Import the Sign component
-import NGO from './components/NGO.js';
+import Sign from './components/Sign';
+import NGO from './components/NGO';
+import NotFound from './components/NotFound'; // Import the NotFound component
+import Contact from './components/Contact'; // Import the Contact component
 
 function App() {
   const location = useLocation(); // Get the current route
 
   return (
     <div className="App">
-      {/* Always render the Navbar */}
       <Navbar />
       
       <Routes>
         {/* Define routes for each section or page */}
         <Route path="/" element={<Home />} />
-        <Route path="/sign" element={<Sign />} /> {/* Route for Sign component */}
+        <Route path="/contact" element={<Contact />} /> {/* Add the Contact route */}
+        <Route path="/brand-campaigns" element={<NotFound />} />
+
+        {/* Catch-all route for unmatched URLs */}
+        <Route path="*" element={<NotFound />} /> {/* NotFound route */}
       </Routes>
 
-      {/* Only render other sections if the route is not /sign */}
-      {location.pathname !== '/sign' && (
+      {location.pathname !== '/sign' && location.pathname !== '/contact' && (
         <>
           <section id="about"><About /></section>
-          {/* <ImageCarousel /> */}
           <section id="services"><Services /></section>
-          <section id="videoSection"><NGO/></section>
+          <section id="videoSection"><NGO /></section>
           <section id="analysis"><Video /></section>
           <section id="contactUs"><Footer /></section>
         </>
