@@ -8,14 +8,15 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 9000;
 
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Updated MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, { useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected successfully'))
   .catch((err) => console.error('MongoDB connection error:', err));
+
 
 const EmailSchema = new mongoose.Schema({
   name: String,
@@ -36,6 +37,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+
 transporter.verify(function (error, success) {
   if (error) {
     console.error('SMTP connection error:', error);
@@ -44,9 +46,11 @@ transporter.verify(function (error, success) {
   }
 });
 
+
 app.post('/send-email', async (req, res) => {
   const { name, email, subject, message } = req.body;
 
+  
   try {
     const newEmail = new Email({
       name,
@@ -57,6 +61,7 @@ app.post('/send-email', async (req, res) => {
 
     await newEmail.save();
 
+    
     const mailOptions = {
       from: email,
       to: process.env.EMAIL_TO, 
@@ -72,6 +77,7 @@ app.post('/send-email', async (req, res) => {
       } else {
         console.log('Email sent to recipient: ' + info.response);
 
+        
         const confirmationMailOptions = {
           from: process.env.EMAIL_TO, 
           to: email, 
@@ -79,6 +85,7 @@ app.post('/send-email', async (req, res) => {
           text: `Hi ${name},\n\nThank you for your message!\n\nWe have received your message and will get back to you shortly.\n\nSubject: ${subject}\n\nMessage: ${message}\n\nBest regards,\nYour Company Name`
         };
 
+        
         transporter.sendMail(confirmationMailOptions, (error, info) => {
           if (error) {
             console.error('Error sending confirmation email:', error);
@@ -95,6 +102,7 @@ app.post('/send-email', async (req, res) => {
     return res.status(500).send({ success: false, message: 'Error saving data', error: error.message });
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

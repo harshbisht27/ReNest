@@ -63,7 +63,10 @@ const Navbar = () => {
       <div className="navbar-actions">
         {/* You can include other actions here if needed */}
       </div>
+      
     </nav>
+   
+
   );
 };
 

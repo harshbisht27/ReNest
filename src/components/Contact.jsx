@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://renest.onrender.com', {
+      const response = await fetch('http://localhost:9000/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

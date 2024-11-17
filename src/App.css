@@ -136,34 +136,42 @@ body {
 }
 
 /* Chatbot Button Styling */
+/* Chatbot Button Styling */
 .chatbot-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 10px 20px;
+  padding: 8px 16px; /* Reduced padding to make the button smaller */
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 25px; /* Smaller radius for a more compact look */
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 14px; /* Slightly smaller text */
+  width: auto; /* Automatically size the button */
+  max-width: 120px; /* Limit the maximum width */
+  text-align: center; /* Ensure text stays centered */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .chatbot-button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Keep hover effect intact */
 }
+
 
 /* Chatbot Container Styling */
 .chatbot-container {
   position: fixed;
   bottom: 70px;
   right: 20px;
-  width: 300px;
-  height: 400px;
+  width: 500px;
+  height: 600px;
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
   background-color: white;
+  z-index: 1;
 }
 
 .chatbot-iframe {
@@ -239,12 +247,13 @@ body {
 .cta-button {
   background-color: #e64a19; /* Darker base color */
   color: white;
+  width: 400px;
   border: none;
   padding: 15px 30px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for scaling */
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
 }
 

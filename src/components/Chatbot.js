@@ -1,5 +1,6 @@
 // Chatbot.js
 import React, { useState } from 'react';
+import '../App.css';
 
 const Chatbot = () => {
   const [isChatbotVisible, setIsChatbotVisible] = useState(false);
@@ -18,7 +19,7 @@ const Chatbot = () => {
       {isChatbotVisible && (
         <div className="chatbot-container">
           <iframe 
-            src="https://app.ailifebot.com/static/standalone/standalone.html?bot_key=9c5495e32254473f&env=p" 
+            src="https://app.ailifebot.com/static/standalone/standalone.html?bot_key=a8546d851e5145ca&env=p" 
             title="Ailifebot Chatbot"
             className="chatbot-iframe"
           ></iframe>

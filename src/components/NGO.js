@@ -36,7 +36,7 @@ const NGO = () => {
         />
       </div>
       <div className={`ngo-text-wrapper ${isVisible ? 'animate-right' : ''}`}>
-        <h2>Best NGO for CSR in India: Mendu Rural Development Society</h2>
+        <h2>Best NGO for CSR in India: Re-Nest</h2>
         <p>
           We are the best NGO in Delhi NCR and best NGO website India. We endeavor for holistic growth of the Nation and its people. We are the best Social Organization in Delhi NCR, India. Support by Donate to NGO or Donate to Poor. We mainly focus on poverty in India, Child Development, Women Empowerment, Skill Development, Education for poor & Street Children, Health programs, Environment protection, Consumer awareness, Elderly care, Rural development programs, Slum development, Donate for Livelihood, etc.
         </p>

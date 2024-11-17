@@ -11,6 +11,7 @@ import Sign from './components/Sign'; // Ensure this is imported
 import NGO from './components/NGO';
 import NotFound from './components/NotFound'; // Import the NotFound component
 import Contact from './components/Contact'; // Import the Contact component
+import Chatbot from './components/Chatbot';
 
 function App() {
   const location = useLocation(); // Get the current route
@@ -35,6 +36,7 @@ function App() {
         <>
           <section id="about"><About /></section>
           <section id="services"><Services /></section>
+          <Chatbot/>
           <section id="videoSection"><NGO /></section>
           <section id="analysis"><Video /></section>
           <section id="contactUs"><Footer /></section>
